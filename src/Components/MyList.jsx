@@ -1,16 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Fade } from "react-awesome-reveal";
 import { Link, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import { AuthContext } from "./Providers/AuthProvider";
 
 const MyList = () => {
     const [spots, setSpots] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const {user} = useContext(AuthContext);
     const deletedSpots = useLoaderData();
 
     useEffect(() => {
-        fetch('https://explore-world-orpin.vercel.app/spots')
+        fetch(`https://explore-world-orpin.vercel.app/spots/user/${user.email}`)
             .then(res => {
                 if (!res.ok) {
                     throw new Error('Failed to fetch');
@@ -25,7 +27,7 @@ const MyList = () => {
                 setError(error);
                 setLoading(false);
             });
-    }, []);
+    }, [user.email]);
 
     if (loading) {
         return (

@@ -4,7 +4,7 @@ import { AuthContext } from './Providers/AuthProvider';
 
 const AddSpots = () => {
 
-    const { loggedInUser } = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
 
     const handleAddSpots = event => {
         event.preventDefault();
@@ -17,8 +17,8 @@ const AddSpots = () => {
         const seasonality = form.seasonality.value;
         const travel_time = form.travel_time.value;
         const total_visitors_per_year = form.total_visitors_per_year.value;
-        const user_email = loggedInUser.email;
-        const user_name = form.user_name.value;
+        const user_email = user.email;
+        const user_name = user.displayName || user.name;
         const photo = form.photo.value;
 
         const newTouristsSpot = {
@@ -70,7 +70,14 @@ const AddSpots = () => {
                         </div>
                         <div className="w-1/2">
                             <label className="input input-bordered flex items-center w-full gap-2">
-                                <input name="country_Name" type="text" className="grow" placeholder="Country Name" />
+                                <select name="country_Name" className="grow">
+                                    <option value="Bangladesh">Bangladesh</option>
+                                    <option value="Thailand">Thailand</option>
+                                    <option value="Indonesia">Indonesia</option>
+                                    <option value="Pakistan">Thailand</option>
+                                    <option value="Pakistan">Thailand</option>
+                                    <option value="Pakistan">Thailand</option>
+                                </select>
                             </label>
                         </div>
                     </div>
@@ -94,14 +101,25 @@ const AddSpots = () => {
                         </div>
                         <div className="w-1/2">
                             <label className="input input-bordered flex items-center w-full gap-2">
-                                <input name="seasonality" type="text" className="grow" placeholder="Seasonality" />
+                                <select name="seasonality" className="grow">
+                                    <option value="Summer">Summer</option>
+                                    <option value="Winter">Winter</option>
+                                    <option value="Spring">Spring</option>
+                                    <option value="Summer">Rainy</option>
+                                    <option value="Autumn">Autumn</option>
+                                </select>
                             </label>
                         </div>
                     </div>
                     <div className="flex gap-3 mb-4">
                         <div className="w-1/2">
                             <label className="input input-bordered flex items-center w-full gap-2">
-                                <input name="travel_time" type="text" className="grow" placeholder="Travel Time" />
+                                <select name="travel_time" className="grow">
+                                    <option value="1">Typically a half day trip, but longer stays are recommended to explore the area fully.</option>
+                                    <option value="2">Typically a full day trip, but longer stays are recommended to explore the area fully.</option>
+                                    <option value="3">A 2-3 days trip is common, but longer stays are recommended to explore the area fully.</option>
+                                    <option value="4">Typically a 5-7 days trip, but longer stays are recommended to explore the area fully.</option>
+                                </select>
                             </label>
                         </div>
                         <div className="w-1/2">
@@ -117,14 +135,15 @@ const AddSpots = () => {
                                     name="user_email"
                                     type="email"
                                     className="grow"
-                                    placeholder="User Email"
+                                    defaultValue={user.email}
+                                    readOnly
                                 />
                             </label>
                         </div>
 
                         <div className="w-1/2">
                             <label className="input input-bordered flex items-center w-full gap-2">
-                                <input name="user_name" type="text" className="grow" placeholder="User Name" />
+                                <input name="user_name" type="text" className="grow" defaultValue={user.displayName} readOnly/>
                             </label>
                         </div>
                     </div>
