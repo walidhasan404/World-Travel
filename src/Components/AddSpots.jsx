@@ -65,18 +65,19 @@ const AddSpots = () => {
                     <div className="flex gap-3 mb-4">
                         <div className="w-1/2">
                             <label className="input input-bordered flex items-center w-full gap-2">
-                                <input name="tourists_spot_name" type="text" className="grow" placeholder="Tourists Spot Name" />
+                                <input required name="tourists_spot_name" type="text" className="grow" placeholder="Tourists Spot Name" />
                             </label>
                         </div>
                         <div className="w-1/2">
                             <label className="input input-bordered flex items-center w-full gap-2">
-                                <select name="country_Name" className="grow">
+                                <select name="country_Name" className="grow" required>
+                                    <option value="" disabled selected>Country</option>
                                     <option value="Bangladesh">Bangladesh</option>
                                     <option value="Thailand">Thailand</option>
                                     <option value="Indonesia">Indonesia</option>
-                                    <option value="Pakistan">Thailand</option>
-                                    <option value="Pakistan">Thailand</option>
-                                    <option value="Pakistan">Thailand</option>
+                                    <option value="Malaysia">Malaysia</option>
+                                    <option value="Vietnam">Vietnam</option>
+                                    <option value="Cambodia">Cambodia</option>
                                 </select>
                             </label>
                         </div>
@@ -84,24 +85,25 @@ const AddSpots = () => {
                     <div className="flex gap-3 mb-4">
                         <div className="w-1/2">
                             <label className="input input-bordered flex items-center w-full gap-2">
-                                <input name="location" type="text" className="grow" placeholder="Location" />
+                                <input required name="location" type="text" className="grow" placeholder="Location" />
                             </label>
                         </div>
                         <div className="w-1/2">
                             <label className="input input-bordered flex items-center w-full gap-2">
-                                <input name="short_description" type="text" className="grow" placeholder="Short Description" />
+                                <input required name="short_description" type="text" className="grow" placeholder="Short Description" />
                             </label>
                         </div>
                     </div>
                     <div className="flex gap-3 mb-4">
                         <div className="w-1/2">
                             <label className="input input-bordered flex items-center w-full gap-2">
-                                <input name="average_cost" type="text" className="grow" placeholder="Average Cost" />
+                                <input required name="average_cost" type="text" className="grow" placeholder="Average Cost" />
                             </label>
                         </div>
                         <div className="w-1/2">
                             <label className="input input-bordered flex items-center w-full gap-2">
-                                <select name="seasonality" className="grow">
+                                <select name="seasonality" className="grow" required>
+                                    <option value="" disabled selected>Seasonality</option>
                                     <option value="Summer">Summer</option>
                                     <option value="Winter">Winter</option>
                                     <option value="Spring">Spring</option>
@@ -114,17 +116,18 @@ const AddSpots = () => {
                     <div className="flex gap-3 mb-4">
                         <div className="w-1/2">
                             <label className="input input-bordered flex items-center w-full gap-2">
-                                <select name="travel_time" className="grow">
-                                    <option value="1">Typically a half day trip, but longer stays are recommended to explore the area fully.</option>
-                                    <option value="2">Typically a full day trip, but longer stays are recommended to explore the area fully.</option>
-                                    <option value="3">A 2-3 days trip is common, but longer stays are recommended to explore the area fully.</option>
-                                    <option value="4">Typically a 5-7 days trip, but longer stays are recommended to explore the area fully.</option>
+                                <select name="travel_time" className="grow text-sm" required>
+                                    <option value="" disabled selected>Travel Time</option>
+                                    <option className='text-sm' value="1">Typically a half day trip, but can stay longer.</option>
+                                    <option className='text-sm' value="2">Typically a full day trip, but can stay longer.</option>
+                                    <option className='text-sm' value="3">A 2-3 days trip is common, but can stay longer.</option>
+                                    <option className='text-sm' value="4">Typically a 5-7 days trip, but can stay longer.</option>
                                 </select>
                             </label>
                         </div>
                         <div className="w-1/2">
                             <label className="input input-bordered flex items-center w-full gap-2">
-                                <input name="total_visitors_per_year" type="text" className="grow" placeholder="Total Visitors Per Year" />
+                                <input required name="total_visitors_per_year" type="text" className="grow" placeholder="Total Visitors Per Year" />
                             </label>
                         </div>
                     </div>
@@ -143,13 +146,13 @@ const AddSpots = () => {
 
                         <div className="w-1/2">
                             <label className="input input-bordered flex items-center w-full gap-2">
-                                <input name="user_name" type="text" className="grow" defaultValue={user.displayName} readOnly/>
+                                <input name="user_name" type="text" className="grow" defaultValue={user.displayName} readOnly />
                             </label>
                         </div>
                     </div>
                     <div className="w-full mt-4">
                         <label className="input input-bordered flex items-center w-full gap-2">
-                            <input name="photo" type="text" className="grow" placeholder="PhotoUrl" />
+                            <input required name="photo" type="text" className="grow" placeholder="PhotoUrl" />
                         </label>
                     </div>
                     <div className="mt-4">
