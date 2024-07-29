@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "explore-world-3fda4-9845f",
     "public": "dist",
     "ignore": [
       "firebase.json",

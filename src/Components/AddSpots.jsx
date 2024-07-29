@@ -58,8 +58,8 @@ const AddSpots = () => {
     }
 
     return (
-        <div className='m-4 bg-blue-50 p-4'>
-            <h2 className="text-3xl">Add Tourist Spots</h2>
+        <div className='m-4 bg-blue-50 dark:bg-slate-500 p-4'>
+            <h2 className="text-3xl mb-2 text-center dark:text-white">Add Tourist Spots</h2>
             <form onSubmit={handleAddSpots}>
                 <div>
                     <div className="flex gap-3 mb-4">

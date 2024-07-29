@@ -85,7 +85,7 @@ const MyList = () => {
 
     return (
         <Fade>
-            <div className="p-4 grid grid-cols-1">
+            <div className="p-4 grid grid-cols-1 bg-slate-50 dark:bg-slate-500">
                 {spots.map(spot => (
                     <div key={spot._id}>
                         <div className="hidden lg:inline">

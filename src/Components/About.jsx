@@ -7,7 +7,7 @@ const About = () => {
     useEffect(() => {
         const timeout = setTimeout(() => {
             setLoading(false);
-        }, 1000);
+        }, 500);
 
         return () => clearTimeout(timeout); // Cleanup function
     }, []);
@@ -22,7 +22,7 @@ const About = () => {
 
     return (
         <Fade cascade damping={0.5}>
-            <section className="py-10 bg-green-100 m-2 lg:m-4">
+            <section className="py-10 bg-green-100 dark:bg-slate-500 dark:text-white m-2 lg:m-4">
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col items-center justify-center">
                         <h2 className="text-3xl lg:text-5xl font-bold mb-6 text-center">About Us</h2>

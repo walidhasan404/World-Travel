@@ -31,7 +31,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch('https://explore-world-orpin.vercel.app/spots')
+        loader: () => fetch('https://explore-world-orpin.vercel.app/spotsSample')
       },
       {
         path: '/spot/:id',

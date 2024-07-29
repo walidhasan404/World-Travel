@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect } from "react";
 import { useLoaderData } from "react-router-dom";
 import SpotsCard from "./SpotsCard";
 
 const CountrySpots = () => {
-    const [loading, setLoading] = useState(true);
+    // const [loading, setLoading] = useState(true);
     const countryName = useLoaderData();
 
     // useEffect(() => {
@@ -25,7 +25,7 @@ const CountrySpots = () => {
         <div className="mx-auto p-4">
             <h2 className="text-2xl font-bold text-center mb-4">Spots in {countryName[0].country_Name} </h2>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-2">
                 {countryName.map(spot => (
                     <SpotsCard
                         key={spot._id}
