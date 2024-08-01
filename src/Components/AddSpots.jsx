@@ -1,10 +1,12 @@
 import { useContext } from 'react';
 import Swal from 'sweetalert2'
 import { AuthContext } from './Providers/AuthProvider';
+import { useNavigate } from 'react-router-dom';
 
 const AddSpots = () => {
 
     const { user } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const handleAddSpots = event => {
         event.preventDefault();
@@ -53,6 +55,7 @@ const AddSpots = () => {
                         text: "This Spot added successfully",
                         icon: "success"
                     });
+                    navigate("/mylist");
                 }
             })
     }
@@ -62,13 +65,13 @@ const AddSpots = () => {
             <h2 className="text-3xl mb-2 text-center dark:text-white">Add Tourist Spots</h2>
             <form onSubmit={handleAddSpots}>
                 <div>
-                    <div className="flex gap-3 mb-4">
-                        <div className="w-1/2">
+                    <div className="flex flex-col lg:flex-row gap-3 mb-4">
+                        <div className="lg:w-1/2">
                             <label className="input input-bordered flex items-center w-full gap-2">
                                 <input required name="tourists_spot_name" type="text" className="grow" placeholder="Tourists Spot Name" />
                             </label>
                         </div>
-                        <div className="w-1/2">
+                        <div className="lg:w-1/2">
                             <label className="input input-bordered flex items-center w-full gap-2">
                                 <select name="country_Name" className="grow" required>
                                     <option value="" disabled selected>Country</option>
@@ -82,25 +85,25 @@ const AddSpots = () => {
                             </label>
                         </div>
                     </div>
-                    <div className="flex gap-3 mb-4">
-                        <div className="w-1/2">
+                    <div className="flex flex-col lg:flex-row gap-3 mb-4">
+                        <div className="lg:w-1/2">
                             <label className="input input-bordered flex items-center w-full gap-2">
                                 <input required name="location" type="text" className="grow" placeholder="Location" />
                             </label>
                         </div>
-                        <div className="w-1/2">
+                        <div className="lg:w-1/2">
                             <label className="input input-bordered flex items-center w-full gap-2">
                                 <input required name="short_description" type="text" className="grow" placeholder="Short Description" />
                             </label>
                         </div>
                     </div>
-                    <div className="flex gap-3 mb-4">
-                        <div className="w-1/2">
+                    <div className="flex flex-col lg:flex-row gap-3 mb-4">
+                        <div className="lg:w-1/2">
                             <label className="input input-bordered flex items-center w-full gap-2">
                                 <input required name="average_cost" type="text" className="grow" placeholder="Average Cost" />
                             </label>
                         </div>
-                        <div className="w-1/2">
+                        <div className="lg:w-1/2">
                             <label className="input input-bordered flex items-center w-full gap-2">
                                 <select name="seasonality" className="grow" required>
                                     <option value="" disabled selected>Seasonality</option>
@@ -113,8 +116,8 @@ const AddSpots = () => {
                             </label>
                         </div>
                     </div>
-                    <div className="flex gap-3 mb-4">
-                        <div className="w-1/2">
+                    <div className="flex flex-col lg:flex-row gap-3 mb-4">
+                        <div className="lg:w-1/2">
                             <label className="input input-bordered flex items-center w-full gap-2">
                                 <select name="travel_time" className="grow text-sm" required>
                                     <option value="" disabled selected>Travel Time</option>
@@ -125,14 +128,14 @@ const AddSpots = () => {
                                 </select>
                             </label>
                         </div>
-                        <div className="w-1/2">
+                        <div className="lg:w-1/2">
                             <label className="input input-bordered flex items-center w-full gap-2">
                                 <input required name="total_visitors_per_year" type="text" className="grow" placeholder="Total Visitors Per Year" />
                             </label>
                         </div>
                     </div>
-                    <div className="flex gap-3 mb-4">
-                        <div className="w-1/2">
+                    <div className="flex flex-col lg:flex-row gap-3 mb-4">
+                        <div className="lg:w-1/2">
                             <label className="input input-bordered flex items-center w-full gap-2">
                                 <input
                                     name="user_email"
@@ -144,7 +147,7 @@ const AddSpots = () => {
                             </label>
                         </div>
 
-                        <div className="w-1/2">
+                        <div className="lg:w-1/2">
                             <label className="input input-bordered flex items-center w-full gap-2">
                                 <input name="user_name" type="text" className="grow" defaultValue={user.displayName} readOnly />
                             </label>

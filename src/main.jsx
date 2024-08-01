@@ -45,7 +45,7 @@ const router = createBrowserRouter([
       {
         path: '/updateSpot/:id',
         element: <UpdateSpot></UpdateSpot>,
-        loader: ({ params }) => fetch(`https://explore-world-orpin.vercel.app/spot/${params.id}`)
+        loader: ({ params }) => fetch(`https://explore-world-orpin.vercel.app/spots/${params.id}`)
       },
       {
         path: '/mylist',

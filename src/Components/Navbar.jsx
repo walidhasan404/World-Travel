@@ -1,7 +1,6 @@
 import { useContext, useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "./Providers/AuthProvider";
-import { CgProfile } from "react-icons/cg";
 import { MdOutlineDarkMode } from "react-icons/md";
 
 const Navbar = () => {
@@ -43,7 +42,7 @@ const Navbar = () => {
     );
 
     return (
-        <div className="navbar bg-base-100 px-4">
+        <div className="navbar bg-base-100 shadow-xl px-4">
             <div className="navbar-start">
                 <div className="dropdown">
                     <button tabIndex={0} className="lg:hidden">
@@ -66,16 +65,16 @@ const Navbar = () => {
                 {user ? (
                     <>
                         <div 
-                            className="tooltip relative"
+                            className="tooltip flex items-center"
                             onMouseEnter={() => setShowTooltip(true)}
                             onMouseLeave={() => setShowTooltip(false)}
                         >
-                            <button className="btn mx-2 bg-orange-200">
-                                <CgProfile />
+                            <button className="mx-2">
+                                <img className="w-10 h-10 rounded-full" src={user.photoURL} alt={user.displayName} />
                             </button>
                             {showTooltip && (
                                 <div className="tooltip-text absolute bg-base-200 text-base-content p-2 rounded-md shadow-md mt-2">
-                                    {user.email}
+                                    {user.displayName}
                                 </div>
                             )}
                         </div>

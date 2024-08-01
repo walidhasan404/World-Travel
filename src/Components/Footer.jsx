@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-        <div>
+        <div className="mt-auto">
             <footer className="footer p-10 bg-neutral text-neutral-content">
                 <aside className="w-1/2">
                     <p className="lg:text-2xl md:text-xl text-lg font-bold">Explore World<br /></p>
