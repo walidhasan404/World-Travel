@@ -22,8 +22,8 @@ const About = () => {
 
     return (
         <Fade cascade damping={0.5}>
-            <section className="py-10 bg-green-100 dark:bg-slate-500 dark:text-white m-2 lg:m-4">
-                <div className="container mx-auto px-4">
+            <section className="py-10 bg-white dark:bg-slate-500 dark:text-white m-2 lg:m-4">
+                <div className="mx-auto px-4">
                     <div className="flex flex-col items-center justify-center">
                         <h2 className="text-3xl lg:text-5xl font-bold mb-6 text-center">About Us</h2>
                         <p className="text-lg lg:text-xl text-center mb-8">Explore World is your ultimate guide to discovering the most fascinating destinations around the globe. We are passionate about travel and dedicated to providing you with the best travel experiences.</p>

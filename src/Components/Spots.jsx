@@ -19,7 +19,7 @@ const Spots = () => {
     };
 
     return (
-        <div className="bg-slate-50 dark:bg-slate-500">
+        <div className="bg-white dark:bg-slate-500">
             <div className="mx-auto p-2">
                 <h3 className="text-3xl text-center dark:text-white font-bold my-3">Tourists Spots: {spots.length}</h3>
                 <div className="text-center mb-4">

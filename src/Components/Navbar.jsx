@@ -42,7 +42,7 @@ const Navbar = () => {
     );
 
     return (
-        <div className="navbar bg-base-100 shadow-xl px-4">
+        <div className="navbar bg-base-100 px-4">
             <div className="navbar-start">
                 <div className="dropdown">
                     <button tabIndex={0} className="lg:hidden">
@@ -69,8 +69,8 @@ const Navbar = () => {
                             onMouseEnter={() => setShowTooltip(true)}
                             onMouseLeave={() => setShowTooltip(false)}
                         >
-                            <button className="mx-2">
-                                <img className="w-10 h-10 rounded-full" src={user.photoURL} alt={user.displayName} />
+                            <button className="w-10 mr-2">
+                                <img className="lg:w-10 lg:h-10 rounded-full" src={user.photoURL} alt={user.displayName} />
                             </button>
                             {showTooltip && (
                                 <div className="tooltip-text absolute bg-base-200 text-base-content p-2 rounded-md shadow-md mt-2">
@@ -78,12 +78,12 @@ const Navbar = () => {
                                 </div>
                             )}
                         </div>
-                        <button onClick={handleThemeToggle} className="btn btn-md bg-slate-300 mr-2 btn-default"><MdOutlineDarkMode/></button>
+                        <button onClick={handleThemeToggle} className="btn btn-md bg-white border-4 mr-2 btn-default"><MdOutlineDarkMode/></button>
                         <button onClick={handleLogOut} className="btn btn-primary">Log Out</button>
                     </>
                 ) : (
                     <>  
-                        <button onClick={handleThemeToggle} className="btn btn-md bg-slate-300 btn-default mr-2"><MdOutlineDarkMode/></button>
+                        <button onClick={handleThemeToggle} className="btn btn-md bg-white border-4 btn-default mr-2"><MdOutlineDarkMode/></button>
                         <Link to="/login" className="btn btn-primary mr-2">Login</Link>
                         <Link to="/signup" className="btn btn-primary">Signup</Link>
                     </>

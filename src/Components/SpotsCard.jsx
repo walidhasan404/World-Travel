@@ -8,7 +8,7 @@ const SpotsCard = ({ spot }) => {
     console.log(photo);
     return (
         <div>
-            <div className="card card-compact w-full h-full bg-base-100 shadow-xl">
+            <div className="card card-compact w-full h-full bg-white border-2">
                 <figure className="lg:w-96 h-full mt-2 mx-2"><img src={photo} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{tourists_spot_name}</h2>

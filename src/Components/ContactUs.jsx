@@ -22,15 +22,15 @@ const ContactUs = () => {
 
     return (
         <Fade cascade>
-            <section className="py-16 bg-green-100 m-2 lg:m-4">
+            <section className="py-16 bg-white m-2 lg:m-4">
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col items-center justify-center">
-                        <h2 className="text-3xl lg:text-5xl font-bold mb-6 text-center">Contact Us</h2>
+                        <h2 className="text-3xl lg:text-4xl font-extrabold mb-6 text-center">Contact Us</h2>
                         <p className="text-lg lg:text-xl text-center mb-8">Have questions, feedback, or need assistance? Don't hesitate to reach out to us!</p>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            <div className="bg-base-200 p-6 rounded-lg">
+                            <div className="bg-white p-6 rounded-lg">
                                 <h3 className="text-xl lg:text-2xl font-bold mb-4">Send us a Message</h3>
-                                <form className="space-y-4 bg-green-50">
+                                <form className="space-y-4 bg-white">
                                     <div className="flex flex-col">
                                         <label htmlFor="name" className="text-lg font-medium">Your Name</label>
                                         <input type="text" id="name" name="name" className="input input-bordered" placeholder="Enter your name" required />
@@ -46,7 +46,7 @@ const ContactUs = () => {
                                     <button type="submit" className="btn btn-primary">Send Message</button>
                                 </form>
                             </div>
-                            <div className="bg-base-200 p-6 rounded-lg">
+                            <div className="bg-white p-6 rounded-lg">
                                 <h3 className="text-xl lg:text-2xl font-bold mb-4">Connect with Us</h3>
                                 <p className="text-lg">Feel free to connect with us on social media for the latest updates, travel inspiration, and more!</p>
                                 <div className="flex space-x-4 mt-4">

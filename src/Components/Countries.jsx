@@ -5,10 +5,10 @@ const Countries = () => {
 
     return (
         <div className="mx-auto justify-center">
-            <h2 className="text-3xl text-center dark:text-white my-4 font-bold">Countries</h2>
+            <h2 className="lg:text-4xl text-2xl md:text-3xl text-center dark:text-white my-4 font-extrabold">Countries</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <Link to="/spots/Bangladesh">
-                    <div className="card my-2 w-full h-full bg-base-100 shadow-xl">
+                    <div className="card my-2 w-full h-full bg-white shadow">
                         <figure className="mt-2"><img src="https://i.ibb.co/7jk9m0C/download-5.jpg" alt="Shoes" /></figure>
                         <div className="card-body">
                             <h2 className="card-title">
@@ -19,7 +19,7 @@ const Countries = () => {
                     </div>
                 </Link>
                 <Link to="/spots/Thailand">
-                    <div className="card my-2 w-full h-full bg-base-100 shadow-xl">
+                    <div className="card my-2 w-full h-full bg-white shadow">
                         <figure className="mt-2"><img src="https://i.ibb.co/Ry9hJ49/download-6.jpg" alt="Shoes" /></figure>
                         <div className="card-body">
                             <h2 className="card-title">
@@ -30,7 +30,7 @@ const Countries = () => {
                     </div>
                 </Link>
                 <Link to="/spots/Indonesia">
-                    <div className="card my-2 w-full h-full bg-base-100 shadow-xl">
+                    <div className="card my-2 w-full h-full bg-white shadow">
                         <figure className="mt-2"><img src="https://i.ibb.co/h1SmS3y/download-7.jpg" alt="Shoes" /></figure>
                         <div className="card-body">
                             <h2 className="card-title">
@@ -41,7 +41,7 @@ const Countries = () => {
                     </div>
                 </Link>
                 <Link to="/spots/Malaysia">
-                    <div className="card my-2 w-full h-full bg-base-100 shadow-xl">
+                    <div className="card my-2 w-full h-full bg-white shadow">
                         <figure className="mt-2"><img src="https://i.ibb.co/0X15vX9/download-8.jpg" alt="Shoes" /></figure>
                         <div className="card-body">
                             <h2 className="card-title">
@@ -52,7 +52,7 @@ const Countries = () => {
                     </div>
                 </Link>
                 <Link to="/spots/Vietnam">
-                    <div className="card my-2 w-full h-full bg-base-100 shadow-xl">
+                    <div className="card my-2 w-full h-full bg-white shadow">
                         <figure className="mt-2"><img src="https://i.ibb.co/C5NMnYF/download-9.jpg" alt="Shoes" /></figure>
                         <div className="card-body">
                             <h2 className="card-title">
@@ -63,7 +63,7 @@ const Countries = () => {
                     </div>
                 </Link>
                 <Link to="/spots/Cambodia">
-                    <div className="card my-2 w-full h-full bg-base-100 shadow-xl">
+                    <div className="card my-2 w-full h-full bg-white shadow">
                         <figure className="mt-2"><img src="https://i.ibb.co/n13fJrg/download-10.jpg" alt="Shoes" /></figure>
                         <div className="card-body">
                             <h2 className="card-title">
