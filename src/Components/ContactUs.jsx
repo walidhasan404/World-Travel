@@ -28,9 +28,9 @@ const ContactUs = () => {
                         <h2 className="text-3xl lg:text-4xl font-extrabold mb-6 text-center">Contact Us</h2>
                         <p className="text-lg lg:text-xl text-center mb-8">Have questions, feedback, or need assistance? Don't hesitate to reach out to us!</p>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            <div className="bg-white p-6 rounded-lg">
+                            <div className="bg-white p-6 rounded-lg shadow-lg">
                                 <h3 className="text-xl lg:text-2xl font-bold mb-4">Send us a Message</h3>
-                                <form className="space-y-4 bg-white">
+                                <form className="space-y-4 bg-white" onSubmit={e => e.preventDefault()}>
                                     <div className="flex flex-col">
                                         <label htmlFor="name" className="text-lg font-medium">Your Name</label>
                                         <input type="text" id="name" name="name" className="input input-bordered" placeholder="Enter your name" required />
@@ -46,20 +46,20 @@ const ContactUs = () => {
                                     <button type="submit" className="btn btn-primary">Send Message</button>
                                 </form>
                             </div>
-                            <div className="bg-white p-6 rounded-lg">
+                            <div className="bg-white p-6 rounded-lg shadow-lg">
                                 <h3 className="text-xl lg:text-2xl font-bold mb-4">Connect with Us</h3>
                                 <p className="text-lg">Feel free to connect with us on social media for the latest updates, travel inspiration, and more!</p>
                                 <div className="flex space-x-4 mt-4">
-                                    <a href="#" className="text-3xl text-blue-500 hover:text-blue-700">
+                                    <a href="#" aria-label="Facebook" className="text-3xl text-blue-500 hover:text-blue-700">
                                         <i className="fab fa-facebook-square"></i>
                                     </a>
-                                    <a href="#" className="text-3xl text-blue-500 hover:text-blue-700">
+                                    <a href="#" aria-label="Twitter" className="text-3xl text-blue-500 hover:text-blue-700">
                                         <i className="fab fa-twitter-square"></i>
                                     </a>
-                                    <a href="#" className="text-3xl text-blue-500 hover:text-blue-700">
+                                    <a href="#" aria-label="Instagram" className="text-3xl text-blue-500 hover:text-blue-700">
                                         <i className="fab fa-instagram-square"></i>
                                     </a>
-                                    <a href="#" className="text-3xl text-blue-500 hover:text-blue-700">
+                                    <a href="#" aria-label="LinkedIn" className="text-3xl text-blue-500 hover:text-blue-700">
                                         <i className="fab fa-linkedin"></i>
                                     </a>
                                 </div>
